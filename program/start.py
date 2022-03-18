@@ -84,7 +84,7 @@ async def start_(c: Client, message: Message):
     user_id = message.from_user.id
     await add_served_user(user_id)
     await message.reply_text(
-        f"""✨ **Hai {message.from_user.mention()}!**\n
+        f"""✨ **Hai, {message.from_user.mention()}!**\n
 💭 [{me_bot.first_name}](https://t.me/{me_bot.username}) adalah bot pemutar musik dan video yang bisa kamu gunakan melalui obrolan video Telegram.
 
 💡 Untuk mengetahui semua perintah bot klik tombol **📚 Commands**.
@@ -94,12 +94,12 @@ async def start_(c: Client, message: Message):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("🍼 Owner", url=f"https://t.me/{OWNER_USERNAME}"),
+                    InlineKeyboardButton("🍼 Owner", url=f"https://t.me/{OWNER_USERNAME}")
                 ],[
-                    InlineKeyboardButton("📚 Commands", callback_data="command_list"),
+                    InlineKeyboardButton("📚 Commands", callback_data="command_list")
                 ],[
                     InlineKeyboardButton("🐺 Werewolf", url=f"https://t.me/{GROUP_SUPPORT}"),
-                    InlineKeyboardButton("🎮 Game Lain", url=f"https://t.me/{UPDATES_CHANNEL}"),
+                    InlineKeyboardButton("🎮 Game Lain", url=f"https://t.me/{UPDATES_CHANNEL}")
                 ],
             ]
         ),
