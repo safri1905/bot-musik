@@ -123,7 +123,7 @@ async def commands_set(_, query: CallbackQuery):
 
 📌 Lihat menu di bawah ini untuk membaca informasi modul & melihat daftar perintah yang tersedia!
 
-🤖 Semua perintah dapat digunakan dengan prefix (! /)""",
+🤖 Semua perintah dapat digunakan dengan prefix (! / . $)""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
