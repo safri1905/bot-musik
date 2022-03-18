@@ -39,27 +39,22 @@ from config import (
 async def start_set(_, query: CallbackQuery):
     await query.answer("home start")
     await query.edit_message_text(
-        f"""Hi [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) 👋🏻\n
-💭 [{me_bot.first_name}](https://t.me/{me_bot.username}) is a bot to play music and video in groups, through the new Telegram video chats.
+        f"""✨ **Hai, [{query.message.chat.first_name}](tg://user?id={query.message.chat.id})!**\n
+💭 [{me_bot.first_name}](https://t.me/{me_bot.username}) adalah bot pemutar musik dan video yang bisa kamu gunakan melalui obrolan video Telegram.
 
-🕵🏻 Check out all the **Bot's commands** and how they work by clicking on the » 📚 **Commands** button!
+💡 Untuk mengetahui semua perintah bot klik tombol **📚 Commands**.
 
-🧑🏻‍💻 To know how to use this bot, please click on the » ❓ **Basic Guide** button!
+🔖 Kamu bisa bergabung ke grup **🐺 Werewolf** atau grup **🎮 Game Lain** untuk menggunakan bot ini.
 """,
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("➕ Add me to a Group ➕", url=f"https://t.me/{me_bot.username}?startgroup=true")
+                    InlineKeyboardButton("🍼 Owner", url=f"https://t.me/{OWNER_USERNAME}")
                 ],[
-                    InlineKeyboardButton("❓ Basic Guide", callback_data="user_guide")
+                    InlineKeyboardButton("📚 Commands", callback_data="command_list")
                 ],[
-                    InlineKeyboardButton("📚 Commands", callback_data="command_list"),
-                    InlineKeyboardButton("❤️ Donate", url=f"https://t.me/{OWNER_USERNAME}")
-                ],[
-                    InlineKeyboardButton("👥 Support Group", url=f"https://t.me/{GROUP_SUPPORT}"),
-                    InlineKeyboardButton("📣 Support Channel", url=f"https://t.me/{UPDATES_CHANNEL}")
-                ],[
-                    InlineKeyboardButton("🌐 Source Code", url="https://github.com/levina-lab/video-stream")
+                    InlineKeyboardButton("🐺 Werewolf", url=f"https://t.me/{GROUP_SUPPORT}"),
+                    InlineKeyboardButton("🎮 Game Lain", url=f"https://t.me/{UPDATES_CHANNEL}")
                 ],
             ]
         ),
@@ -124,20 +119,20 @@ async def commands_set(_, query: CallbackQuery):
     user_id = query.from_user.id
     await query.answer("commands menu")
     await query.edit_message_text(
-        f"""✨ **Hello [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) !**
+        f"""✨ **Hai, [{query.message.chat.first_name}](tg://user?id={query.message.chat.id})!**
 
-» Check out the menu below to read the module information & see the list of available Commands !
+📌 Lihat menu di bawah ini untuk membaca informasi modul & melihat daftar perintah yang tersedia!
 
-All commands can be used with (`! / .`) handler""",
+🤖 Semua perintah dapat digunakan dengan prefix (! /)""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("👮🏻‍♀️ Admins Commands", callback_data="admin_command"),
+                    InlineKeyboardButton("👮‍♂️ Admins Commands", callback_data="admin_command"),
                 ],[
-                    InlineKeyboardButton("👩🏻‍💼 Users Commands", callback_data="user_command"),
+                    InlineKeyboardButton("👱‍♂️ Users Commands", callback_data="user_command"),
                 ],[
-                    InlineKeyboardButton("Sudo Commands", callback_data="sudo_command"),
-                    InlineKeyboardButton("Owner Commands", callback_data="owner_command"),
+                    InlineKeyboardButton("🤴 Sudo Commands", callback_data="sudo_command"),
+                    InlineKeyboardButton("🍼Owner Commands", callback_data="owner_command"),
                 ],[
                     InlineKeyboardButton("🔙 Go Back", callback_data="home_start")
                 ],
