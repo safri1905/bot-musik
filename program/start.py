@@ -85,7 +85,7 @@ async def start_(c: Client, message: Message):
     await add_served_user(user_id)
     await message.reply_text(
         f"""✨ **Hai {message.from_user.mention()}!**\n
-💭 [{BOT_NAME}](https://t.me/{BOT_USERNAME}) adalah bot pemutar musik dan video yang bisa kamu gunakan melalui obrolan video Telegram.
+💭 [{me_bot.first_name}](https://t.me/{me_bot.username}) adalah bot pemutar musik dan video yang bisa kamu gunakan melalui obrolan video Telegram.
 
 💡 Untuk mengetahui semua perintah bot klik tombol **📚 Commands**.
 
@@ -119,14 +119,14 @@ async def alive(c: Client, message: Message):
     buttons = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("✨ Group", url=f"https://t.me/{GROUP_SUPPORT}"),
+                InlineKeyboardButton("🐺 Werewolf", url=f"https://t.me/{GROUP_SUPPORT}"),
                 InlineKeyboardButton(
-                    "📣 Channel", url=f"https://t.me/{UPDATES_CHANNEL}"
+                    "🎮 Game Lain", url=f"https://t.me/{UPDATES_CHANNEL}"
                 ),
             ]
         ]
     )
-    text = f"**Hello {message.from_user.mention()}, I'm {me_bot.first_name}**\n\n🧑🏼‍💻 My Master: [{ALIVE_NAME}](https://t.me/{OWNER_USERNAME})\n👾 Bot Version: `v{__version__}`\n🔥 Pyrogram Version: `{pyrover}`\n🐍 Python Version: `{__python_version__}`\n✨ PyTgCalls Version: `{pytover.__version__}`\n🆙 Uptime Status: `{uptime}`\n\n❤ **Thanks for Adding me here, for playing video & music on your Group's video chat**"
+    text = f"**Hello {message.from_user.mention()}, I'm {me_bot.first_name}**\n\n🧑🏼‍💻 My Master: [{ALIVE_NAME}](https://t.me/{OWNER_USERNAME})\n👾 Bot Version: `v{__version__}`\n🔥 Pyrogram Version: `{pyrover}`\n🐍 Python Version: `{__python_version__}`\n✨ PyTgCalls Version: `{pytover.__version__}`\n🆙 Uptime Status: `{uptime}`"
     await c.send_photo(
         chat_id,
         photo=f"{ALIVE_IMG}",
@@ -190,10 +190,8 @@ async def new_chat(c: Client, m: Message):
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
-                                InlineKeyboardButton("📣 Channel", url=f"https://t.me/{UPDATES_CHANNEL}"),
-                                InlineKeyboardButton("💭 Support", url=f"https://t.me/{GROUP_SUPPORT}")
-                            ],[
-                                InlineKeyboardButton("👤 Assistant", url=f"https://t.me/{me_user.username}")
+                                InlineKeyboardButton("🐺 Werewolf", url=f"https://t.me/{GROUP_SUPPORT}"),
+                                InlineKeyboardButton("🎮 Game Lain", url=f"https://t.me/{UPDATES_CHANNEL}")
                             ]
                         ]
                     )
