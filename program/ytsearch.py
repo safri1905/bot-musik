@@ -36,7 +36,7 @@ async def youtube_search(_, message: Message):
     text = ""
     for i in range(5):
         try:
-            text += f"🏷 **Name:** __{results[i]['title']}__\n"
+            text += f"🏷 **Title:** __{results[i]['title']}__\n"
             text += f"⏱ **Duration:** `{results[i]['duration']}`\n"
             text += f"👀 **Views:** `{results[i]['views']}`\n"
             text += f"📣 **Channel:** {results[i]['channel']}\n"
