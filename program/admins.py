@@ -153,7 +153,7 @@ async def skip(c: Client, m: Message):
             chat_id,
             photo=image,
             reply_markup=InlineKeyboardMarkup(buttons),
-            caption=f"⏭ **Skipped** to the next track.\n\n🗂 **Name:** [{queue[0]}]({queue[1]})\n💭 **Chat:** `{chat_id}`\n🧸 **Request by:** {requester}",
+            caption=f"⏭ **Skipped** to the next track.\n\n🗂 **Title:** [{queue[0]}]({queue[1]})\n🧸 **Request by:** {requester}",
         )
         remove_if_exists(image)
 
