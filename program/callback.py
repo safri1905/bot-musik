@@ -132,7 +132,7 @@ async def commands_set(_, query: CallbackQuery):
                     InlineKeyboardButton("👱‍♂️ Users Commands", callback_data="user_command"),
                 ],[
                     InlineKeyboardButton("🤴 Sudo Commands", callback_data="sudo_command"),
-                    InlineKeyboardButton("🍼Owner Commands", callback_data="owner_command"),
+                    InlineKeyboardButton("🍼 Owner Commands", callback_data="owner_command"),
                 ],[
                     InlineKeyboardButton("🔙 Go Back", callback_data="home_start")
                 ],
