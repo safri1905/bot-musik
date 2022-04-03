@@ -3,7 +3,7 @@ from functools import partial, wraps
 from typing import Callable, Union, Optional
 from pyrogram import Client
 from pyrogram.types import Message, CallbackQuery
-from config import SUDO_USERS, OWNER_ID, MEMBER_WITHBENEFIT
+from config import SUDO_USERS, OWNER_ID
 from driver.core import bot, me_bot
 from driver.admins import get_administrators
 from driver.database.dblockchat import blacklisted_chats
@@ -50,14 +50,6 @@ def bot_creator(func: Callable) -> Callable:
 def sudo_users_only(func: Callable) -> Callable:
     async def decorator(client: Client, message: Message):
         if message.from_user.id in SUDO_USERS:
-            return await func(client, message)
-        
-    return decorator
-
-
-def member_with_benefit(func: Callable) -> Callable:
-    async def decorator(client: Client, message: Message):
-        if message.from_user.id in MEMBER_WITHBENEFIT:
             return await func(client, message)
         
     return decorator
