@@ -25,7 +25,6 @@ MONGODB_URL = getenv("MONGODB_URL")
 COMMAND_PREFIXES = list(getenv("COMMAND_PREFIXES", "/ ! . $").split())
 OWNER_ID = list(map(int, getenv("OWNER_ID").split()))
 SUDO_USERS = list(map(int, getenv("SUDO_USERS").split()))
-MEMBER_WITHBENEFIT = list(map(int, getenv("MEMBER_WITHBENEFIT").split()))
 
 # image resources vars
 IMG_1 = getenv("IMG_1", "https://telegra.ph/file/d6f92c979ad96b2031cba.png")
