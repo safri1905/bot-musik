@@ -27,7 +27,7 @@ from driver.design.thumbnail import thumb
 from driver.design.chatname import CHAT_TITLE
 from driver.queues import QUEUE, clear_queue
 from driver.filters import command, other_filters
-from driver.decorators import authorized_users_only, member_with_benefit, check_blacklist
+from driver.decorators import authorized_users_only, check_blacklist
 from driver.utils import skip_current_song, skip_item, remove_if_exists
 from driver.database.dbqueue import (
     is_music_playing,
@@ -65,7 +65,6 @@ async def update_admin(client, message: Message):
     & other_filters
 )
 @authorized_users_only
-@member_with_benefit
 @check_blacklist()
 async def stop(client, m: Message):
     chat_id = m.chat.id
@@ -86,7 +85,6 @@ async def stop(client, m: Message):
     command(["pause", f"pause@{BOT_USERNAME}", "vpause"]) & other_filters
 )
 @authorized_users_only
-@member_with_benefit
 @check_blacklist()
 async def pause(client, m: Message):
     chat_id = m.chat.id
@@ -110,7 +108,6 @@ async def pause(client, m: Message):
     command(["resume", f"resume@{BOT_USERNAME}", "vresume"]) & other_filters
 )
 @authorized_users_only
-@member_with_benefit
 @check_blacklist()
 async def resume(client, m: Message):
     chat_id = m.chat.id
@@ -132,7 +129,6 @@ async def resume(client, m: Message):
 
 @Client.on_message(command(["skip", f"skip@{BOT_USERNAME}", "vskip"]) & other_filters)
 @authorized_users_only
-@member_with_benefit
 @check_blacklist()
 async def skip(c: Client, m: Message):
     user_id = m.from_user.id
