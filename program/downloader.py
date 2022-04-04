@@ -53,7 +53,7 @@ async def song_downloader(_, message):
     try:
         results = YoutubeSearch(query, max_results=1).to_dict()
         link = f"https://youtube.com{results[0]['url_suffix']}"
-        title = results[0]["title"][:40]
+        title = results[0]["title"][:60]
         thumbnail = results[0]["thumbnails"][0]
         thumb_name = f"{title}.jpg"
         thumb = requests.get(thumbnail, allow_redirects=True)
@@ -70,7 +70,7 @@ async def song_downloader(_, message):
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        rep = f"{title}\n\n• uploader @{bn}"
+        rep = f"{title}\n• __uploader__ @{bn}"
         host = str(info_dict["uploader"])
         secmul, dur, dur_arr = 1, 0, duration.split(":")
         for i in range(len(dur_arr) - 1, -1, -1):
