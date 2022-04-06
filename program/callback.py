@@ -49,9 +49,14 @@ async def start_set(_, query: CallbackQuery):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("🍼 Owner", url=f"https://t.me/{OWNER_USERNAME}")
+                    InlineKeyboardButton("➕ Tambahkan ke Grup ➕", url=f"https://t.me/{me_bot.username}?startgroup=true")
                 ],[
-                    InlineKeyboardButton("📚 Commands", callback_data="command_list")
+                    InlineKeyboardButton("❓ Panduan Dasar", callback_data="user_guide")
+                ],[
+                    InlineKeyboardButton("🍼 Pemilik Bot", url=f"https://t.me/{OWNER_USERNAME}")
+                ],[
+                    InlineKeyboardButton("📚 Commands", callback_data="command_list"),
+                    InlineKeyboardButton("📢 Channel", url="https://t.me/pemandulagu")
                 ],[
                     InlineKeyboardButton("🐺 Werewolf", url=f"https://t.me/{GROUP_SUPPORT}"),
                     InlineKeyboardButton("🎮 Game Lain", url=f"https://t.me/{UPDATES_CHANNEL}")
