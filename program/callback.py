@@ -72,7 +72,7 @@ async def start_set(_, query: CallbackQuery):
 async def quick_set(_, query: CallbackQuery):
     await query.answer("quick bot usage")
     await query.edit_message_text(
-        f"""ℹ️ Quick use Guide bot, please read fully !
+        f"""ℹ️ Panduan singkat untuk streaming musik dan video
 
 👩🏻‍💼 » /play - Type this with give the song title or youtube link or audio file to play Music. (Remember to don't play YouTube live stream by using this command!, because it will cause unforeseen problems.)
 
@@ -80,7 +80,7 @@ async def quick_set(_, query: CallbackQuery):
 
 👩🏻‍💼 » /vstream - Type this with give the YouTube live stream video link or m3u8 link to play live Video. (Remember to don't play local audio/video files or non-live YouTube video by using this command!, because it will cause unforeseen problems.)
 
-❓ Have questions? Contact us in [Support Group](https://t.me/{GROUP_SUPPORT}).""",
+❓ Ada pertanyaan? Hubungi kami di @{GROUP_SUPPORT} dan @{UPDATES_CHANNEL}.""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("🔙 Go Back", callback_data="user_guide")]]
         ),
@@ -93,23 +93,23 @@ async def quick_set(_, query: CallbackQuery):
 async def guide_set(_, query: CallbackQuery):
     await query.answer("user guide")
     await query.edit_message_text(
-        f"""❓ How to use this Bot ?, read the Guide below !
+        f"""❓ Bagaimana cara menggunakan bot ini? Silakan baca panduan di bawah ini!
 
-1.) First, add this bot to your Group.
-2.) Then, promote this bot as administrator on the Group also give all permissions except Anonymous admin.
-3.) After promoting this bot, type /reload in Group to update the admin data.
-3.) Invite @{me_user.username} to your group or type /userbotjoin to invite her, unfortunately the userbot will joined by itself when you type `/play (song name)` or `/vplay (song name)`.
-4.) Turn on/Start the video chat first before start to play video/music.
+1.) Pertama, tambahkan bot ke dalam grup.
+2.) Lalu, jadikan bot ini sebagai admin grup dan berikan semua izin kecuali Anonymous Admin.
+3.) Setelah menjadikan bot sebagai admin, ketik /reload di grup untuk memperbarui data.
+3.) Selanjutnya ketik /userbotjoin untuk membuat Akun Asisten bergabung ke dalam grup, Akun Asisten juga akan bergabung ke dalam grup jika kamu menggunakan perintah `/play (judul lagu)` atau `/vplay (judul lagu)`.
+4.) Aktifkan terlebih dahulu obrolan grup sebelum kamu memainkan musik atau video.
 
-`- END, EVERYTHING HAS BEEN SETUP -`
+`- SELESAI, BOT SIAP DIGUNAKAN -`
 
-📌 If the userbot not joined to video chat, make sure if the video chat already turned on and the userbot in the chat.
+📌 Jika Akun Asisten tidak bergabung ke dalam obrolan, pastikan obrolan grup sudah aktif dan Akun Asisten berada di dalam grup.
 
-💡 If you have a follow-up questions about this bot, you can tell it on my support chat here: @{GROUP_SUPPORT}.""",
+💡 Jika kamu punya pertanyaan terkait bot ini, hubungi kami di @{GROUP_SUPPORT} dan @{UPDATES_CHANNEL}.""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("» Quick use Guide «", callback_data="quick_use")
+                    InlineKeyboardButton("» Panduan Singkat «", callback_data="quick_use")
                 ],[
                     InlineKeyboardButton("🔙 Go Back", callback_data="home_start")
                 ],
