@@ -101,7 +101,7 @@ async def start_(c: Client, message: Message):
                     InlineKeyboardButton("🍼 Pemilik Bot", url=f"https://t.me/{OWNER_USERNAME}")
                 ],[
                     InlineKeyboardButton("📚 Commands", callback_data="command_list"),
-                    InlineKeyboardButton("📢 Channel", url="https://t.me/pemandulagu")
+                    InlineKeyboardButton("📢 Channel", url="https://t.me/SocietyID/3")
                 ],[
                     InlineKeyboardButton("🐺 Werewolf", url=f"https://t.me/{GROUP_SUPPORT}"),
                     InlineKeyboardButton("🎮 Game Lain", url=f"https://t.me/{UPDATES_CHANNEL}")
