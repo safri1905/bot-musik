@@ -74,11 +74,11 @@ async def quick_set(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""ℹ️ Panduan singkat untuk streaming musik dan video
 
-👩🏻‍💼 » /play - Type this with give the song title or youtube link or audio file to play Music. (Remember to don't play YouTube live stream by using this command!, because it will cause unforeseen problems.)
+👩🏻‍💼 » /play - Ketik ini dengan menyertakan judul lagu atau tautan youtube atau file audio untuk memutar Musik. (Jangan memutar live streaming YouTube dengan menggunakan perintah ini! Karena akan menyebabkan masalah yang tidak terduga.)
 
-👩🏻‍💼 » /vplay - Type this with give the song title or youtube link or video file to play Video. (Remember to don't play YouTube live video by using this command!, because it will cause unforeseen problems.)
+👩🏻‍💼 » /vplay - Ketik ini dengan menyertakan judul lagu atau link youtube atau file video untuk memutar Video. (Jangan memutar video live streaming YouTube dengan menggunakan perintah ini! Karena akan menyebabkan masalah yang tidak terduga.)
 
-👩🏻‍💼 » /vstream - Type this with give the YouTube live stream video link or m3u8 link to play live Video. (Remember to don't play local audio/video files or non-live YouTube video by using this command!, because it will cause unforeseen problems.)
+👩🏻‍💼 » /vstream - Ketik ini dengan menyertakan tautan video live streaming YouTube atau tautan m3u8 untuk memutar Video langsung. (Jangan memutar file audio/video lokal atau video YouTube non-live dengan menggunakan perintah ini! Karena akan menyebabkan masalah yang tidak terduga.)
 
 ❓ Ada pertanyaan? Hubungi kami di @{GROUP_SUPPORT} dan @{UPDATES_CHANNEL}.""",
         reply_markup=InlineKeyboardMarkup(
