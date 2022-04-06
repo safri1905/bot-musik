@@ -94,11 +94,11 @@ async def start_(c: Client, message: Message):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("➕ Add me to a Group ➕", url=f"https://t.me/{me_bot.username}?startgroup=true")
+                    InlineKeyboardButton("➕ Tambahkan ke Grup ➕", url=f"https://t.me/{me_bot.username}?startgroup=true")
                 ],[
-                    InlineKeyboardButton("❓ Basic Guide", callback_data="user_guide")
+                    InlineKeyboardButton("❓ Panduan Dasar", callback_data="user_guide")
                 ],[
-                    InlineKeyboardButton("🍼 Owner", url=f"https://t.me/{OWNER_USERNAME}")
+                    InlineKeyboardButton("🍼 Pemilik Bot", url=f"https://t.me/{OWNER_USERNAME}")
                 ],[
                     InlineKeyboardButton("📚 Commands", callback_data="command_list"),
                     InlineKeyboardButton("📢 Channel", url="https://t.me/pemandulagu")
