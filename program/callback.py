@@ -53,7 +53,7 @@ async def start_set(_, query: CallbackQuery):
                 ],[
                     InlineKeyboardButton("❓ Panduan Dasar", callback_data="user_guide")
                 ],[
-                    InlineKeyboardButton("🍼 Pemilik Bot", url=f"https://t.me/{OWNER_USERNAME}")
+                    InlineKeyboardButton("🍼 Owner", url=f"https://t.me/{OWNER_USERNAME}")
                 ],[
                     InlineKeyboardButton("📚 Commands", callback_data="command_list"),
                     InlineKeyboardButton("📢 Channel", url="https://t.me/SocietyID/3")
