@@ -89,7 +89,7 @@ async def start_(c: Client, message: Message):
 
 💡 Untuk mengetahui semua perintah bot klik tombol **📚 Commands**.
 
-🔖 Kamu bisa bergabung ke grup **🐺 Werewolf** atau grup **🎮 Game Lain** untuk menggunakan bot ini.
+🔖 Kamu bisa bergabung ke grup yang tertera [di sini](https://t.me/{UPDATES_CHANNEL}/3) untuk bisa menggunakan bot ini.
 """,
         reply_markup=InlineKeyboardMarkup(
             [
