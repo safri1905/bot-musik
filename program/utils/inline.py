@@ -1,5 +1,10 @@
 """ inline section button """
 
+from config import (
+GROUP_SUPPORT,
+UPDATES_CHANNEL,
+)
+
 from pyrogram.types import (
   InlineKeyboardButton,
   InlineKeyboardMarkup,
@@ -9,7 +14,7 @@ from pyrogram.types import (
 def stream_markup(user_id):
   buttons = [
     [
-      InlineKeyboardButton( "📢 Billboard", url=f"https://t.me/SocietyID/3"),
+      InlineKeyboardButton( "📢 Billboard", url=f"https://t.me/{UPDATES_CHANNEL}/3"),
      ],
     [
       InlineKeyboardButton(text="⚙ Menu", callback_data=f'stream_menu_panel | {user_id}'),
