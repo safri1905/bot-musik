@@ -22,17 +22,11 @@ from pytgcalls.types.input_stream.quality import (
 from pytgcalls.types.stream import StreamAudioEnded, StreamVideoEnded
 from pytgcalls.types import Update
 
-from config import (
-    GROUP_SUPPORT,
-    UPDATES_CHANNEL,
-)
-
 
 keyboard = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton( "🐺 Werewolf", url=f"https://t.me/{GROUP_SUPPORT}"),
-            InlineKeyboardButton( "🎮 Game Lain", url=f"https://t.me/{UPDATES_CHANNEL}"),
+            InlineKeyboardButton( "📢 Billboard", url=f"https://t.me/SocietyID/3"),
         ],
         [
             InlineKeyboardButton(text="⚙ Menu", callback_data="stream_menu_panel"),
