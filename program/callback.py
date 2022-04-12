@@ -44,23 +44,21 @@ async def start_set(_, query: CallbackQuery):
 
 💡 Untuk mengetahui semua perintah bot klik tombol **📚 Commands**.
 
-🔖 Kamu bisa bergabung ke grup **🐺 Werewolf** atau grup **🎮 Game Lain** untuk menggunakan bot ini.
+🔖 Kamu bisa bergabung ke grup yang tertera [di sini](https://t.me/{UPDATES_CHANNEL}/3) untuk bisa menggunakan bot ini.
 """,
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton("➕ Tambahkan ke Grup ➕", url=f"https://t.me/{me_bot.username}?startgroup=true")
                 ],[
+                    InlineKeyboardButton("🍼 Owner", url=f"https://t.me/{OWNER_USERNAME}"),
+                    InlineKeyboardButton("📚 Commands", callback_data="command_list")
+                ],[
+                    InlineKeyboardButton("👥 Downtown", url=f"https://t.me/{GROUP_SUPPORT}"),
+                    InlineKeyboardButton("📢 Billboard", url=f"https://t.me/{UPDATES_CHANNEL}/3")
+                ],[
                     InlineKeyboardButton("❓ Panduan Dasar", callback_data="user_guide")
-                ],[
-                    InlineKeyboardButton("🍼 Owner", url=f"https://t.me/{OWNER_USERNAME}")
-                ],[
-                    InlineKeyboardButton("📚 Commands", callback_data="command_list"),
-                    InlineKeyboardButton("📢 Channel", url="https://t.me/SocietyID/3")
-                ],[
-                    InlineKeyboardButton("🐺 Werewolf", url=f"https://t.me/{GROUP_SUPPORT}"),
-                    InlineKeyboardButton("🎮 Game Lain", url=f"https://t.me/{UPDATES_CHANNEL}")
-                ],
+                ]
             ]
         ),
         disable_web_page_preview=True,
@@ -80,7 +78,7 @@ async def quick_set(_, query: CallbackQuery):
 
 👩🏻‍💼 » /vstream - Ketik ini dengan menyertakan tautan video live streaming YouTube atau tautan m3u8 untuk memutar Video langsung. (Jangan memutar file audio/video lokal atau video YouTube non-live dengan menggunakan perintah ini! Karena akan menyebabkan masalah yang tidak terduga.)
 
-❓ Ada pertanyaan? Hubungi kami di @{GROUP_SUPPORT} dan @{UPDATES_CHANNEL}.""",
+❓ Ada pertanyaan? Hubungi kami di @{UPDATES_CHANNEL}.""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("🔙 Go Back", callback_data="user_guide")]]
         ),
@@ -105,7 +103,7 @@ async def guide_set(_, query: CallbackQuery):
 
 📌 Jika Akun Asisten tidak bergabung ke dalam obrolan, pastikan obrolan grup sudah aktif dan Akun Asisten berada di dalam grup.
 
-💡 Jika kamu punya pertanyaan terkait bot ini, hubungi kami di @{GROUP_SUPPORT} dan @{UPDATES_CHANNEL}.""",
+💡 Jika kamu punya pertanyaan terkait bot ini, hubungi kami di @{UPDATES_CHANNEL}.""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
