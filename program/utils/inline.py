@@ -1,10 +1,5 @@
 """ inline section button """
 
-from config import (
-  GROUP_SUPPORT,
-  UPDATES_CHANNEL,
-)
-
 from pyrogram.types import (
   InlineKeyboardButton,
   InlineKeyboardMarkup,
