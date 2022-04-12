@@ -96,16 +96,14 @@ async def start_(c: Client, message: Message):
                 [
                     InlineKeyboardButton("➕ Tambahkan ke Grup ➕", url=f"https://t.me/{me_bot.username}?startgroup=true")
                 ],[
+                    InlineKeyboardButton("🍼 Owner", url=f"https://t.me/{OWNER_USERNAME}"),
+                    InlineKeyboardButton("📚 Commands", callback_data="command_list")
+                ],[
+                    InlineKeyboardButton("👥 Downtown", url=f"https://t.me/{GROUP_SUPPORT}"),
+                    InlineKeyboardButton("📢 Billboard", url=f"https://t.me/{UPDATES_CHANNEL}/3")
+                ],[
                     InlineKeyboardButton("❓ Panduan Dasar", callback_data="user_guide")
-                ],[
-                    InlineKeyboardButton("🍼 Owner", url=f"https://t.me/{OWNER_USERNAME}")
-                ],[
-                    InlineKeyboardButton("📚 Commands", callback_data="command_list"),
-                    InlineKeyboardButton("📢 Channel", url="https://t.me/SocietyID/3")
-                ],[
-                    InlineKeyboardButton("🐺 Werewolf", url=f"https://t.me/{GROUP_SUPPORT}"),
-                    InlineKeyboardButton("🎮 Game Lain", url=f"https://t.me/{UPDATES_CHANNEL}")
-                ],
+                ]
             ]
         ),
         disable_web_page_preview=True,
@@ -124,9 +122,8 @@ async def alive(c: Client, message: Message):
     buttons = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("🐺 Werewolf", url=f"https://t.me/{GROUP_SUPPORT}"),
-                InlineKeyboardButton(
-                    "🎮 Game Lain", url=f"https://t.me/{UPDATES_CHANNEL}"
+                InlineKeyboardButton("👥 Downtown", url=f"https://t.me/{GROUP_SUPPORT}"),
+                InlineKeyboardButton("📢 Billboard", url=f"https://t.me/{UPDATES_CHANNEL}"
                 ),
             ]
         ]
